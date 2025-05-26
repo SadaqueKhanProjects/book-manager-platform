@@ -1,0 +1,26 @@
+### Get all books
+GET http://localhost:8080/api/books
+Accept: application/json
+
+###
+
+### Add a new book
+POST http://localhost:8080/api/books
+Content-Type: application/json
+
+{
+  "title": "Clean Code",
+  "author": "Robert C. Martin",
+  "year": 2008
+}
+
+###
+
+### Get book by ID
+GET http://localhost:8080/api/books/1
+Accept: application/json
+
+###
+
+### Delete a book by ID
+DELETE http://localhost:8080/api/books/1
