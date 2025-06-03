@@ -1,54 +1,39 @@
-# 📚 BookTrackr – AI-Powered Book Logging & Recommendations
+# 📚 BookTrackr – AI-Powered Book Recommendation Web App
 
-> A smart, personal library tracker that helps you log books you’ve read, rate them, and get AI-based recommendations for what to read next.
-
-## 🧭 Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Architecture](#architecture)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
+> A smart, full-stack web application to log books you’ve read, rate them, and get intelligent recommendations based on your reading history and preferences.
 
 ---
 
 ## 📖 About
 
-**BookTrackr** is a modern, minimalistic app that lets you:
+**BookTrackr** is a modern, responsive web application for bibliophiles. It enables users to maintain a personal reading log and receive tailored book recommendations using AI models.
 
-- Log books you've read or are currently reading  
-- Rate them using a simple star-based system  
-- Leverage AI to get smart book recommendations based on your reading habits and preferences
-
-Perfect for readers who want to keep a reading journal and get personalized suggestions without the clutter of traditional platforms.
+Ideal for those who want a simple, effective tool to track reading progress, rate titles, and discover their next favorite book.
 
 ---
 
 ## 🚀 Features
 
-- 📚 Add/edit/delete books from your personal list
-- ⭐ Rate books with a 1–5 star system
-- 🤖 AI-powered book recommendations
-- 🔍 Filter/search books by title, author, or genre
-- 🧼 Clean, responsive UI
-- 🐳 Dockerized setup for easy deployment
+- Add, edit, and delete books from your reading list
+- Rate books using a 1–5 star system
+- View book details and maintain reading progress
+- AI-based recommendations using user preferences (planned)
+- Search/filter books by title, author, or genre
+- Fully containerized with Docker for consistent deployment
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer         | Technology                                  |
-|---------------|---------------------------------------------|
-| Frontend      | Jetpack Compose (Android)                   |
-| Backend       | Spring Boot / FastAPI (planned for AI)      |
-| Database      | PostgreSQL                                  |
-| AI Services   | OpenAI API / Embedding models (TBD)         |
-| Infrastructure| Docker, GitHub Actions                      |
-| Testing       | JUnit (Kotlin), Espresso (Android UI)       |
+| Layer         | Technology                                       |
+|---------------|--------------------------------------------------|
+| Frontend      | React.js                                         |
+| Backend       | Spring Boot (Java) / FastAPI (Python, for AI)    |
+| Database      | PostgreSQL                                       |
+| AI Services   | OpenAI API / Sentence Transformers (planned)     |
+| Infrastructure| Docker, Kubernetes, Terraform                    |
+| DevOps        | GitHub Actions (CI/CD)                           |
+| Testing       | JUnit (Java), Jest (React)                       |
 
 ---
 
@@ -56,83 +41,14 @@ Perfect for readers who want to keep a reading journal and get personalized sugg
 
 ### Prerequisites
 
-- Android Studio / JDK 17+
-- Docker (optional)
-- OpenAI API Key (if using recommendation engine)
+- Java 17+
+- Node.js + npm
+- Docker (optional for containerized setup)
+- OpenAI API Key (optional, for AI features)
 
-### Clone & Run
+### Clone & Run Locally
 
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/your-username/booktrackr.git
 cd booktrackr
-
-# Build and run Android app
-./gradlew assembleDebug
-```
-
-(Optional)
-```bash
-# If using backend locally
-cd backend
-./gradlew bootRun
-```
-
----
-
-## ▶️ Usage
-
-1. Launch the app on your emulator or device
-2. Add books you’ve read or are reading
-3. Tap to rate and view book details
-4. Explore AI-recommended books based on your preferences
-
----
-
-## 🧱 Architecture
-
-```
-📁 booktrackr/
-├── app/                  # Android Jetpack Compose UI
-├── backend/              # (Planned) API & AI logic
-├── data/                 # Local database models
-├── domain/               # Core business logic
-├── ai/                   # (Planned) AI Recommendation Engine
-├── docker-compose.yml
-└── README.md
-```
-
-Clean architecture with:
-- **Presentation Layer (UI)**
-- **Domain Layer (Logic)**
-- **Data Layer (Room/PostgreSQL)**
-- **AI Layer (Embedding & Similarity Matching)**
-
----
-
-## 🧪 Testing
-
-```bash
-# Android unit tests
-./gradlew test
-
-# UI tests (Espresso)
-./gradlew connectedAndroidTest
-```
-
----
-
-## 🤝 Contributing
-
-1. Fork the repo
-2. Create your branch: `git checkout -b feature/my-feature`
-3. Commit: `git commit -am 'Add my feature'`
-4. Push: `git push origin feature/my-feature`
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-MIT License.  
-See the [LICENSE](LICENSE) file for details.
