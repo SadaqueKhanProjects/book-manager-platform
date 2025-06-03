@@ -1,4 +1,3 @@
-# ✅ ARM64-compatible base image (works on all platforms)
 FROM eclipse-temurin:17-jdk
 
 WORKDIR /app

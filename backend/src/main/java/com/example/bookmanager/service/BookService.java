@@ -13,12 +13,6 @@ import java.util.List;
 public class BookService {
     private final BookRepository repository;
 
-    @PostConstruct
-    public void init() {
-        Book sample = new Book("1984", "George Orwell", 1949);
-        repository.save(sample);
-    }
-
     public BookService(BookRepository repository) {
         this.repository = repository;
     }
